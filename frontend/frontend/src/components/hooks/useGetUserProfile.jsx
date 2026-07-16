@@ -17,7 +17,7 @@ const useGetUserProfile = (userId) => {
         if (token) headers.Authorization = `Bearer ${token}`;
 
         const res = await axios.get(
-          `http://localhost:8001/api/v1/user/${userId}/profile`,
+          `https://instagram-bkev.onrender.com/api/v1/user/${userId}/profile`,
           { headers },
         );
         console.log(res.data);
