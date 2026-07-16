@@ -13,7 +13,7 @@ const useGetAllMessage = () => {
 
       try {
         const res = await axios.get(
-          `http://localhost:8001/api/v1/message/all/${selectedUser._id}`,
+          `https://instagram-bkev.onrender.com/api/v1/message/all/${selectedUser._id}`,
           { withCredentials: true },
         );
 
