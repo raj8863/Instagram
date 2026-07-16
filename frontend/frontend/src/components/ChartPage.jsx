@@ -27,7 +27,7 @@ const ChatPage = () => {
       if (!selectedUser?._id) return;
       try {
         const res = await axios.get(
-          `http://localhost:8001/api/v1/message/all/${selectedUser._id}`,
+          `https://instagram-bkev.onrender.com/api/v1/message/all/${selectedUser._id}`,
           { withCredentials: true }
         );
         if (res.data.success) {
@@ -54,7 +54,7 @@ const ChatPage = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:8001/api/v1/message/send/${selectedUser._id}`,
+        `https://instagram-bkev.onrender.com/api/v1/message/send/${selectedUser._id}`,
         {
           message: textMessage.trim(),
         },
