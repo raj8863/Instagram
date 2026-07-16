@@ -40,7 +40,7 @@ const Post = ({ post }) => {
     try {
       const action = liked ? "dislike" : "like";
       const res = await axios.get(
-        `http://localhost:8001/api/v1/post/${post?._id}/${action}`,
+        `https://instagram-bkev.onrender.com/api/v1/post/${post?._id}/${action}`,
         { withCredentials: true },
       );
       if (res.data.success) {
