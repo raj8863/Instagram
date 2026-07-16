@@ -21,7 +21,7 @@ const Signup = () => {
     try {
       setloading(true);
       const res = await axios.post(
-        "http://localhost:8001/api/v1/user/register",
+        "https://instagram-bkev.onrender.com/api/v1/user/register",
         input,
         {
           headers: {
