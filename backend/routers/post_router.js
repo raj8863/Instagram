@@ -1,0 +1,26 @@
+import express from "express";
+import isAuthenticated from "../middlewares/isAuthenticated.js";
+import {
+  addComment,
+  addNewPost,
+  bookmarkPost,
+  dislikePost,
+  getAllPost,
+  getCommentsPost,
+  likePost,
+  deletePost
+} from "../controllers/post_controller.js";
+import upload from "../middlewares/multer.js";
+
+const router = express.Router();
+
+router.route("/addpost").post(isAuthenticated, upload.single('image'), addNewPost);
+router.route("/all").get(isAuthenticated, getAllPost);
+router.route("/:id/like").get(isAuthenticated, likePost);
+router.route("/:id/dislike").get(isAuthenticated, dislikePost);
+router.route("/:id/comment").post(isAuthenticated, addComment);
+router.route("/:id/comment/all").get(isAuthenticated, getCommentsPost);
+router.route('/delete/:id').delete(isAuthenticated, deletePost);
+router.route("/:id/bookmark").post(isAuthenticated, bookmarkPost);
+
+export default router;
