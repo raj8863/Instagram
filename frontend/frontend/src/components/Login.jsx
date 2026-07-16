@@ -24,7 +24,7 @@ const Login = () => {
     try {
       setloading(true);
       const res = await axios.post(
-        "http://localhost:8001/api/v1/user/login",
+        "https://instagram-bkev.onrender.com/api/v1/user/login",
         input,
         {
           headers: {
