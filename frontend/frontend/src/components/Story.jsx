@@ -39,7 +39,7 @@ const Stories = () => {
 
   const fetchStories = async () => {
     try {
-      const res = await axios.get("http://localhost:8001/api/v1/story/all", {
+      const res = await axios.get("https://instagram-bkev.onrender.com/api/v1/story/all", {
         withCredentials: true,
       });
 
