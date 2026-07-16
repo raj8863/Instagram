@@ -30,7 +30,7 @@ const CommentDialog = ({ open, setOpen, postData }) => {
 
     try {
       const res = await axios.post(
-        `http://localhost:8001/api/v1/post/${currentPost._id}/comment`,
+        `https://instagram-bkev.onrender.com/api/v1/post/${currentPost._id}/comment`,
         { text },
         {
           headers: { "Content-Type": "application/json" },
